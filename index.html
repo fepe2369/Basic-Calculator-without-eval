@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <header>
+        <h1>BASIC CALCULATOR</h1>
+        <p>Improved version without <code>eval()</code>.</p>
+    </header>
+    <section>
+        <div class="cuerpo-calculadora">
+            <form action="#">
+                <div>
+                    <input type="text" id="display" name="pantalla" readonly>
+                </div>
+                <div class="fila">
+                    <input type="button" value="AC" class="limpiar" onclick="clearDisplay()">
+                    <input type="button" value="DE" class="limpiar" onclick="deleteLast()">
+                    <input type="button" value="^" class="operacion" onclick="appendToDisplay('**')">
+                    <input type="button" value="÷" class="operacion" onclick="appendToDisplay('/')">
+                </div>
+                <div class="fila">
+                    <input type="button" value="7" onclick="appendToDisplay('7')">
+                    <input type="button" value="8" onclick="appendToDisplay('8')">
+                    <input type="button" value="9" onclick="appendToDisplay('9')">
+                    <input type="button" value="×" class="operacion" onclick="appendToDisplay('*')">
+                </div>
+                <div class="fila">
+                    <input type="button" value="4" onclick="appendToDisplay('4')">
+                    <input type="button" value="5" onclick="appendToDisplay('5')">
+                    <input type="button" value="6" onclick="appendToDisplay('6')">
+                    <input type="button" value="+" class="operacion" onclick="appendToDisplay('+')">
+                </div>
+                <div class="fila">
+                    <input type="button" value="1" onclick="appendToDisplay('1')">
+                    <input type="button" value="2" onclick="appendToDisplay('2')">
+                    <input type="button" value="3" onclick="appendToDisplay('3')">
+                    <input type="button" value="−" class="operacion" onclick="appendToDisplay('-')">
+                </div>
+                <div class="fila">
+                    <input type="button" value="0" class="ult" onclick="appendToDisplay('0')">
+                    <input type="button" value="." class="ult" onclick="appendToDisplay('.')">
+                    <input type="button" value="(" class="ult" onclick="appendToDisplay('(')">
+                    <input type="button" value=")" class="ult" onclick="appendToDisplay(')')">
+                    <input type="button" value="=" class="operacion igual" onclick="calculateResult()">
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
